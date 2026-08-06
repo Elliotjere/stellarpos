@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Mail, MessageCircle } from "lucide-react";
+import { Menu, X, Mail, MessageCircle, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/stellarpos-logo.png.asset.json";
 import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
 
@@ -21,12 +21,30 @@ export function Navbar() {
       }`}
     >
       <div className="hidden border-b border-white/10 lg:block">
-        <div className="section-shell flex h-9 items-center justify-end gap-6 text-xs text-navy-foreground/70">
-          <a className="inline-flex items-center gap-2 hover:text-primary" href={`mailto:${SITE.email}`}>
-            <Mail className="size-3.5" aria-hidden="true" /> {SITE.email}
-          </a>
-          <span className="text-navy-foreground/40">|</span>
-          <span>{SITE.address.street}, {SITE.address.city}</span>
+        <div className="section-shell flex h-9 items-center justify-between gap-6 text-xs text-navy-foreground/70">
+          <div className="flex items-center gap-5">
+            <a className="inline-flex items-center gap-2 hover:text-primary" href={`mailto:${SITE.email}`}>
+              <Mail className="size-3.5" aria-hidden="true" /> {SITE.email}
+            </a>
+            <span className="inline-flex items-center gap-2">
+              <MapPin className="size-3.5 text-primary" aria-hidden="true" />
+              {SITE.address.street}, {SITE.address.city}
+            </span>
+            <a className="inline-flex items-center gap-2 hover:text-primary" href={`tel:+${SITE.phoneRaw}`}>
+              <Phone className="size-3.5 text-primary" aria-hidden="true" /> {SITE.phoneDisplay}
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-primary">
+              <MessageCircle className="size-4" aria-hidden="true" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-primary">
+              <Facebook className="size-4" aria-hidden="true" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-primary">
+              <Instagram className="size-4" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
 
