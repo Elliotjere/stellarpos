@@ -33,7 +33,7 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+255748281617",
+    telephone: "+255723451650",
     contactType: "sales",
     areaServed: "TZ",
     availableLanguage: ["en", "sw"],
@@ -47,7 +47,7 @@ const localBusinessSchema = {
   name: "Stellar Technologies Limited — StellarPOS Tanzania",
   image: `${SITE.domain}/favicon.png`,
   url: SITE.domain,
-  telephone: "+255748281617",
+  telephone: "+255723451650",
   email: SITE.email,
   priceRange: "TZS 360,000 - TZS 960,000",
   address: {
