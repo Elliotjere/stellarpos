@@ -2,9 +2,9 @@ export const SITE = {
   domain: "https://possystemtanzania.com",
   company: "Stellar Technologies Limited",
   product: "StellarPOS",
-  phoneDisplay: "+255 748 281 617",
-  phoneRaw: "255748281617",
-  email: "sales@possoftwaretanzania.com",
+  phoneDisplay: "+255 723 451 650",
+  phoneRaw: "255723451650",
+  email: "sales@possystemtanzania.com",
   address: {
     street: "Kisiwani Street, Ubungo",
     city: "Dar es Salaam",
@@ -64,6 +64,6 @@ export const FAQS = [
   },
   {
     q: "How do I get started?",
-    a: "Message us on WhatsApp at +255 748 281 617 or fill in the contact form on this page. We will schedule a free demo, recommend the right plan for your business and handle installation and training.",
+    a: "Message us on WhatsApp at +255 723 451 650 or fill in the contact form on this page. We will schedule a free demo, recommend the right plan for your business and handle installation and training.",
   },
 ];
