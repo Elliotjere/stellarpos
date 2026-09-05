@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BeautyShopsRouteImport } from './routes/beauty-shops'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BeautyShopsRoute = BeautyShopsRouteImport.update({
+  id: '/beauty-shops',
+  path: '/beauty-shops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/beauty-shops': typeof BeautyShopsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/beauty-shops': typeof BeautyShopsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/beauty-shops': typeof BeautyShopsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/beauty-shops'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/beauty-shops'
+  id: '__root__' | '/' | '/beauty-shops'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BeautyShopsRoute: typeof BeautyShopsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beauty-shops': {
+      id: '/beauty-shops'
+      path: '/beauty-shops'
+      fullPath: '/beauty-shops'
+      preLoaderRoute: typeof BeautyShopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BeautyShopsRoute: BeautyShopsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
