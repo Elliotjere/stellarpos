@@ -1,8 +1,16 @@
+import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/stellarpos-logo.png.asset.json";
 import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
 
-const industries = ["Retail POS Tanzania", "Supermarket POS", "Pharmacy POS", "Restaurant POS Tanzania", "Wholesale POS"];
+const industries = [
+  { label: "Cosmetics & Beauty Shop POS", to: "/beauty-shops" },
+  { label: "Retail POS Tanzania", to: "/#industries" },
+  { label: "Supermarket POS", to: "/#industries" },
+  { label: "Pharmacy POS", to: "/#industries" },
+  { label: "Restaurant POS Tanzania", to: "/#industries" },
+  { label: "Wholesale POS", to: "/#industries" },
+];
 
 export function Footer() {
   return (
@@ -31,8 +39,8 @@ export function Footer() {
           <h2 className="text-sm font-bold text-navy-foreground">Solutions</h2>
           <ul className="mt-4 space-y-2.5">
             {industries.map((i) => (
-              <li key={i}>
-                <a href="#industries" className="text-sm text-navy-foreground/70 hover:text-primary">{i}</a>
+              <li key={i.label}>
+                <Link to={i.to} className="text-sm text-navy-foreground/70 hover:text-primary">{i.label}</Link>
               </li>
             ))}
           </ul>
