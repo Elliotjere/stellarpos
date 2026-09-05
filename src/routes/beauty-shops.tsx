@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: "How much does a POS system for a beauty shop cost in Tanzania?",
-    a: `StellarPOS starts at TZS ${PLANS[0].price} per year for the Starter plan, TZS ${PLANS[1].price} per year for the Business plan and TZS ${PLANS[2].price} per year for the Enterprise plan. All plans include setup assistance, training and support with no hidden monthly fees.`,
+    a: `StellarPOS starts at TZS ${PLANS[0]!.price} per year for the Starter plan, TZS ${PLANS[1]!.price} per year for the Business plan and TZS ${PLANS[2]!.price} per year for the Enterprise plan. All plans include setup assistance, training and support with no hidden monthly fees.`,
   },
   {
     q: "Do you install POS systems for cosmetics shops outside Dar es Salaam?",
@@ -104,7 +104,7 @@ const pageSchema = {
     "Point of sale and inventory management system for cosmetics and beauty shops in Tanzania: barcode billing, product variants, expiry tracking, loyalty rewards and profit reports.",
   offers: {
     "@type": "Offer",
-    price: PLANS[0].price.replace(/,/g, ""),
+    price: PLANS[0]!.price.replace(/,/g, ""),
     priceCurrency: "TZS",
     availability: "https://schema.org/InStock",
   },
