@@ -1,4 +1,5 @@
-import { Store, ShoppingCart, Pill, UtensilsCrossed, Coffee, Cpu, Hammer, Shirt, Sparkles, Truck } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Store, ShoppingCart, Pill, UtensilsCrossed, Coffee, Cpu, Hammer, Shirt, Sparkles, Truck, ArrowRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import supermarket from "@/assets/supermarket.jpg";
 import restaurant from "@/assets/restaurant.jpg";
@@ -12,7 +13,7 @@ const industries = [
   { icon: Cpu, title: "Electronics Stores", text: "Serial number tracking, warranties and quotations." },
   { icon: Hammer, title: "Hardware Stores", text: "Bulk units, price levels and credit customers." },
   { icon: Shirt, title: "Fashion Stores", text: "Size, colour and style variants in one product." },
-  { icon: Sparkles, title: "Beauty Shops", text: "Products plus services with loyalty rewards." },
+  { icon: Sparkles, title: "Beauty Shops", text: "Products plus services with loyalty rewards.", href: "/beauty-shops" },
   { icon: Truck, title: "Wholesale Businesses", text: "Wholesale pricing, deliveries and multi-branch stock." },
 ];
 
@@ -28,7 +29,7 @@ export function Industries() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_auto]">
           <div className="grid gap-4 sm:grid-cols-2">
-            {industries.map(({ icon: Icon, title, text }) => (
+            {industries.map(({ icon: Icon, title, text, href }) => (
               <article key={title} className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-card">
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent text-primary">
                   <Icon className="size-5" aria-hidden="true" />
@@ -36,6 +37,14 @@ export function Industries() {
                 <div className="min-w-0">
                   <h3 className="text-sm font-bold text-foreground">{title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{text}</p>
+                  {href && (
+                    <Link
+                      to={href}
+                      className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+                    >
+                      POS for {title.toLowerCase()} <ArrowRight className="size-3" aria-hidden="true" />
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

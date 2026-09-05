@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { Menu, X, Mail, MessageCircle, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/stellarpos-logo.png.asset.json";
 import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
@@ -6,6 +7,8 @@ import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -49,7 +52,7 @@ export function Navbar() {
       </div>
 
       <nav className="section-shell grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:h-20" aria-label="Main">
-        <a href="#home" className="flex min-w-0 items-center" aria-label={`${SITE.product} home`}>
+        <a href={isHome ? "#home" : "/#home"} className="flex min-w-0 items-center" aria-label={`${SITE.product} home`}>
           <img src={logo.url} alt="StellarPOS by Stellar Technologies Limited logo" className="h-7 w-auto lg:h-9" width={1043} height={239} />
         </a>
 
@@ -57,7 +60,7 @@ export function Navbar() {
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={isHome ? l.href : `/${l.href}`}
               className="rounded-md px-3 py-2 text-sm font-medium text-navy-foreground/80 transition-colors hover:text-primary"
             >
               {l.label}
@@ -94,7 +97,7 @@ export function Navbar() {
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={isHome ? l.href : `/${l.href}`}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-2 py-2.5 text-sm font-medium text-navy-foreground/85 hover:text-primary"
               >
