@@ -1,9 +1,10 @@
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
-import { Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
+import { Mail, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
 import { SectionHeading } from "./SectionHeading";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -78,7 +79,7 @@ export function Contact() {
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MessageCircle className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+                  <WhatsAppIcon className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
                   <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                     WhatsApp {SITE.phoneDisplay}
                   </a>

@@ -1,18 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  BarChart3,
-  Barcode,
-  BellRing,
-  Boxes,
-  CalendarClock,
-  CheckCircle2,
-  Gift,
-  MessageCircle,
-  Sparkles,
-  Tags,
-  Users,
-} from "lucide-react";
+import { ArrowRight, BarChart3, Barcode, BellRing, Boxes, CalendarClock, CheckCircle2, Gift, Sparkles, Tags, Users } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Footer } from "@/components/site/Footer";
@@ -22,6 +9,7 @@ import { SITE, WHATSAPP_URL } from "@/lib/site";
 import cosmeticsShop from "@/assets/cosmetics-shop.jpg";
 import cosmeticsCounter from "@/assets/cosmetics-counter.jpg";
 import cosmeticsShelves from "@/assets/cosmetics-shelves.jpg";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const TITLE = "POS System for Cosmetics & Beauty Shops in Tanzania | StellarPOS";
 const DESCRIPTION =
@@ -207,7 +195,7 @@ function BeautyShopsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
                 >
-                  <MessageCircle className="size-4" aria-hidden="true" /> Request a Free Demo
+                  <WhatsAppIcon className="size-4" aria-hidden="true" /> Request a Free Demo
                 </a>
                 <Link
                   to="/"
@@ -302,7 +290,7 @@ function BeautyShopsPage() {
                 rel="noopener noreferrer"
                 className="mt-9 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
               >
-                <MessageCircle className="size-4" aria-hidden="true" /> WhatsApp {SITE.phoneDisplay}
+                <WhatsAppIcon className="size-4" aria-hidden="true" /> WhatsApp {SITE.phoneDisplay}
               </a>
             </div>
           </div>
@@ -345,7 +333,7 @@ function BeautyShopsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
               >
-                <MessageCircle className="size-4" aria-hidden="true" /> Chat on WhatsApp
+                <WhatsAppIcon className="size-4" aria-hidden="true" /> Chat on WhatsApp
               </a>
               <Link
                 to="/"

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "@tanstack/react-router";
-import { Menu, X, Mail, MessageCircle, MapPin, Phone, Facebook, Instagram } from "lucide-react";
+import { Menu, X, Mail, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/stellarpos-logo.png.asset.json";
 import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ export function Navbar() {
           </div>
           <div className="flex items-center gap-3">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-primary">
-              <MessageCircle className="size-4" aria-hidden="true" />
+              <WhatsAppIcon className="size-4" aria-hidden="true" />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-primary">
               <Facebook className="size-4" aria-hidden="true" />
@@ -72,7 +73,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="ml-3 inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
+            <WhatsAppIcon className="size-4" aria-hidden="true" />
             <span className="flex flex-col leading-none">
               <span>WhatsApp</span>
               <span className="text-[10px] font-medium opacity-90">{SITE.phoneDisplay}</span>
@@ -110,7 +111,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
             >
-              <MessageCircle className="size-4" aria-hidden="true" /> WhatsApp {SITE.phoneDisplay}
+              <WhatsAppIcon className="size-4" aria-hidden="true" /> WhatsApp {SITE.phoneDisplay}
             </a>
             <a href={`mailto:${SITE.email}`} className="px-2 py-2 text-xs text-navy-foreground/70">
               {SITE.email}
