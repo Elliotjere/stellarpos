@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeautyShopsRouteImport } from './routes/beauty-shops'
+import { Route as JewelryShopsRouteImport } from './routes/jewelry-shops'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const BeautyShopsRoute = BeautyShopsRouteImport.update({
   path: '/beauty-shops',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JewelryShopsRoute = JewelryShopsRouteImport.update({
+  id: '/jewelry-shops',
+  path: '/jewelry-shops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/beauty-shops': typeof BeautyShopsRoute
+  '/jewelry-shops': typeof JewelryShopsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/beauty-shops': typeof BeautyShopsRoute
+  '/jewelry-shops': typeof JewelryShopsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/beauty-shops': typeof BeautyShopsRoute
+  '/jewelry-shops': typeof JewelryShopsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/beauty-shops'
+  fullPaths: '/' | '/beauty-shops' | '/jewelry-shops'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/beauty-shops'
-  id: '__root__' | '/' | '/beauty-shops'
+  to: '/' | '/beauty-shops' | '/jewelry-shops'
+  id: '__root__' | '/' | '/beauty-shops' | '/jewelry-shops'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BeautyShopsRoute: typeof BeautyShopsRoute
+  JewelryShopsRoute: typeof JewelryShopsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BeautyShopsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jewelry-shops': {
+      id: '/jewelry-shops'
+      path: '/jewelry-shops'
+      fullPath: '/jewelry-shops'
+      preLoaderRoute: typeof JewelryShopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BeautyShopsRoute: BeautyShopsRoute,
+  JewelryShopsRoute: JewelryShopsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
