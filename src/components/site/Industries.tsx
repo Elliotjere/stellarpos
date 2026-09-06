@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Store, ShoppingCart, Pill, UtensilsCrossed, Coffee, Cpu, Hammer, Shirt, Sparkles, Truck, ArrowRight } from "lucide-react";
+import { Store, ShoppingCart, Pill, UtensilsCrossed, Coffee, Cpu, Hammer, Shirt, Sparkles, Truck, Gem, Wine, ArrowRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import supermarket from "@/assets/supermarket.jpg";
 import restaurant from "@/assets/restaurant.jpg";
@@ -14,8 +14,11 @@ const industries = [
   { icon: Hammer, title: "Hardware Stores", text: "Bulk units, price levels and credit customers." },
   { icon: Shirt, title: "Fashion Stores", text: "Size, colour and style variants in one product." },
   { icon: Sparkles, title: "Beauty Shops", text: "Products plus services with loyalty rewards.", href: "/beauty-shops" },
+  { icon: Gem, title: "Jewelry Shops", text: "Gold priced by weight and karat with item-level tracking.", href: "/jewelry-shops" },
+  { icon: Wine, title: "Liquor Stores", text: "Bottle and crate units, fast bar billing and stock control." },
   { icon: Truck, title: "Wholesale Businesses", text: "Wholesale pricing, deliveries and multi-branch stock." },
 ];
+
 
 export function Industries() {
   return (

@@ -1,14 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import logo from "@/assets/stellarpos-logo.png.asset.json";
 import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const industries = [
   { label: "Cosmetics & Beauty Shop POS", to: "/beauty-shops" },
+  { label: "Jewelry Shop POS Tanzania", to: "/jewelry-shops" },
   { label: "Retail POS Tanzania", to: "/#industries" },
   { label: "Supermarket POS", to: "/#industries" },
   { label: "Pharmacy POS", to: "/#industries" },
   { label: "Restaurant POS Tanzania", to: "/#industries" },
+  { label: "Liquor Store POS", to: "/#industries" },
   { label: "Wholesale POS", to: "/#industries" },
 ];
 
@@ -58,7 +61,7 @@ export function Footer() {
               <a href={`mailto:${SITE.email}`} className="hover:text-primary">{SITE.email}</a>
             </li>
             <li className="flex items-start gap-2.5">
-              <MessageCircle className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
                 {SITE.phoneDisplay}
               </a>

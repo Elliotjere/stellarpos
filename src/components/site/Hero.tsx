@@ -1,7 +1,8 @@
-import { ArrowRight, MessageCircle, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroShop from "@/assets/hero-shop.jpg";
 import dashboard from "@/assets/dashboard.jpg";
 import { WHATSAPP_URL } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const bullets = [
   "Sales & fast billing",
@@ -58,7 +59,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-navy-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              <MessageCircle className="size-4" aria-hidden="true" /> Chat on WhatsApp
+              <WhatsAppIcon className="size-4" aria-hidden="true" /> Chat on WhatsApp
             </a>
           </div>
         </div>

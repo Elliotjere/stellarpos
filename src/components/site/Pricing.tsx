@@ -1,6 +1,7 @@
-import { Check, MessageCircle } from "lucide-react";
+import { Check } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { WHATSAPP_URL } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export const PLANS = [
   {
@@ -97,7 +98,7 @@ export function Pricing() {
                     : "bg-navy text-navy-foreground"
                 }`}
               >
-                <MessageCircle className="size-4" aria-hidden="true" /> Get Started
+                <WhatsAppIcon className="size-4" aria-hidden="true" /> Get Started
               </a>
             </article>
           ))}
