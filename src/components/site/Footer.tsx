@@ -11,7 +11,7 @@ const industries = [
   { label: "Supermarket POS", to: "/#industries" },
   { label: "Pharmacy POS", to: "/#industries" },
   { label: "Restaurant POS Tanzania", to: "/#industries" },
-  { label: "Liquor Store POS", to: "/#industries" },
+  { label: "Liquor Store POS", to: "/liquor-stores" },
   { label: "Wholesale POS", to: "/#industries" },
 ];
 
