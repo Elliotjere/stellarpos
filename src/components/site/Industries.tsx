@@ -15,7 +15,7 @@ const industries = [
   { icon: Shirt, title: "Fashion Stores", text: "Size, colour and style variants in one product." },
   { icon: Sparkles, title: "Beauty Shops", text: "Products plus services with loyalty rewards.", href: "/beauty-shops" },
   { icon: Gem, title: "Jewelry Shops", text: "Gold priced by weight and karat with item-level tracking.", href: "/jewelry-shops" },
-  { icon: Wine, title: "Liquor Stores", text: "Bottle and crate units, fast bar billing and stock control." },
+  { icon: Wine, title: "Liquor Stores", text: "Bottle and crate units, fast bar billing and stock control.", href: "/liquor-stores" },
   { icon: Truck, title: "Wholesale Businesses", text: "Wholesale pricing, deliveries and multi-branch stock." },
 ];
 
