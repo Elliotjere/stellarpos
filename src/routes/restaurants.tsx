@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import restaurantHero from "@/assets/restaurant.jpg";
+import restaurantHero from "@/assets/restaurant-hero.jpg";
 import restaurantCounter from "@/assets/restaurant-counter.jpg";
 import restaurantTables from "@/assets/restaurant-tables.jpg";
 
@@ -226,7 +226,7 @@ function RestaurantsPage() {
             <div className="reveal relative" style={{ animationDelay: "120ms" }}>
               <img
                 src={restaurantHero}
-                alt="Waiter taking an order on a tablet POS system in a busy Tanzanian restaurant with customers dining"
+                alt="Waiter taking a table order on a tablet POS system in a Tanzanian restaurant with customers dining at wooden tables"
                 width={1200}
                 height={800}
                 fetchPriority="high"
