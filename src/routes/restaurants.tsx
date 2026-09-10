@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import restaurantHero from "@/assets/restaurant.jpg";
+import restaurantHero from "@/assets/restaurant-hero.jpg";
 import restaurantCounter from "@/assets/restaurant-counter.jpg";
 import restaurantTables from "@/assets/restaurant-tables.jpg";
 
