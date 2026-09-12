@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import restaurantHero from "@/assets/restaurant-hero.jpg";
+import restaurantHero from "@/assets/restaurant-stellarpos-hero.jpg.asset.json";
 import restaurantCounter from "@/assets/restaurant-counter.jpg";
 import restaurantTables from "@/assets/restaurant-tables.jpg";
 
@@ -225,10 +225,10 @@ function RestaurantsPage() {
 
             <div className="reveal relative" style={{ animationDelay: "120ms" }}>
               <img
-                src={restaurantHero}
-                alt="Waiter taking a table order on a tablet POS system in a Tanzanian restaurant with customers dining at wooden tables"
-                width={1200}
-                height={800}
+                src={restaurantHero.url}
+                alt="Tanzanian restaurant cashier using StellarPOS to serve customers at the counter"
+                width={1408}
+                height={768}
                 fetchPriority="high"
                 className="w-full rounded-2xl shadow-elevated"
               />
