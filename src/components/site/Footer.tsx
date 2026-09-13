@@ -9,7 +9,7 @@ const industries = [
   { label: "Jewelry Shop POS Tanzania", to: "/jewelry-shops" },
   { label: "Retail POS Tanzania", to: "/#industries" },
   { label: "Supermarket POS", to: "/supermarkets" },
-  { label: "Pharmacy POS", to: "/#industries" },
+  { label: "Pharmacy POS", to: "/pharmacies" },
   { label: "Restaurant POS Tanzania", to: "/restaurants" },
   { label: "Liquor Store POS", to: "/liquor-stores" },
   { label: "Wholesale POS", to: "/#industries" },

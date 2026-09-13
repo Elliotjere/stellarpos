@@ -7,7 +7,7 @@ import restaurant from "@/assets/restaurant.jpg";
 const industries = [
   { icon: Store, title: "Retail Shops", text: "Retail POS Tanzania with barcode billing and daily profit tracking." },
   { icon: ShoppingCart, title: "Supermarkets", text: "Multiple tills, fast queues and tight stock control.", href: "/supermarkets" },
-  { icon: Pill, title: "Pharmacies", text: "Batch and expiry tracking with supplier records." },
+  { icon: Pill, title: "Pharmacies", text: "Batch and expiry tracking with supplier records.", href: "/pharmacies" },
   { icon: UtensilsCrossed, title: "Restaurants", text: "Restaurant POS Tanzania with table orders and kitchen tickets.", href: "/restaurants" },
   { icon: Coffee, title: "Cafes", text: "Quick service billing and daily cash reconciliation." },
   { icon: Cpu, title: "Electronics Stores", text: "Serial number tracking, warranties and quotations." },
