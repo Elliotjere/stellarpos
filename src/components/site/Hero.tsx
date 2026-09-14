@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroShop from "@/assets/hero-shop.jpg";
-import dashboard from "@/assets/dashboard.jpg";
+import heroAsset from "@/assets/stellarpos-hero.jpg.asset.json";
 import { WHATSAPP_URL } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
