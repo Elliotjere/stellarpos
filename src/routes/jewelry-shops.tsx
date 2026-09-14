@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import jewelryShop from "@/assets/jewelry-shop.jpg";
+import jewelryHeroAsset from "@/assets/jewelry-hero.jpg.asset.json";
 import jewelryCounter from "@/assets/jewelry-counter.jpg";
 import jewelryDisplay from "@/assets/jewelry-display.jpg";
 
@@ -225,10 +225,10 @@ function JewelryShopsPage() {
 
             <div className="reveal relative" style={{ animationDelay: "120ms" }}>
               <img
-                src={jewelryShop}
-                alt="Jewellery shop attendant in Tanzania serving a customer at a gold display counter using a StellarPOS point of sale terminal"
+                src={jewelryHeroAsset.url}
+                alt="Shop attendant in a jewelry shop in Zanzibar scanning a bracelet for a customer using a StellarPOS point of sale terminal"
                 width={1408}
-                height={960}
+                height={768}
                 fetchPriority="high"
                 className="w-full rounded-2xl shadow-elevated"
               />
