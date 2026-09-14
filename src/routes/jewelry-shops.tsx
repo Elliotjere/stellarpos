@@ -225,10 +225,10 @@ function JewelryShopsPage() {
 
             <div className="reveal relative" style={{ animationDelay: "120ms" }}>
               <img
-                src={jewelryShop}
-                alt="Jewellery shop attendant in Tanzania serving a customer at a gold display counter using a StellarPOS point of sale terminal"
+                src={jewelryHeroAsset.url}
+                alt="Shop attendant in a jewelry shop in Zanzibar scanning a bracelet for a customer using a StellarPOS point of sale terminal"
                 width={1408}
-                height={960}
+                height={768}
                 fetchPriority="high"
                 className="w-full rounded-2xl shadow-elevated"
               />
