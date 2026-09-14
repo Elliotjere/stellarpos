@@ -20,7 +20,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import pharmacyHero from "@/assets/pharmacy-hero.jpg";
+import pharmacyHeroAsset from "@/assets/stellarpos-hero.jpg.asset.json";
 import pharmacyInventory from "@/assets/pharmacy-inventory.jpg";
 import pharmacyCounter from "@/assets/pharmacy-counter.jpg";
 
@@ -213,7 +213,7 @@ function PharmaciesPage() {
               </div>
             </div>
             <div className="reveal relative" style={{ animationDelay: "120ms" }}>
-              <img src={pharmacyHero} alt="Tanzanian pharmacist in a white coat using a StellarPOS terminal at a pharmacy counter" width={1536} height={1024} fetchPriority="high" className="aspect-[3/2] w-full rounded-2xl object-cover shadow-elevated" />
+              <img src={pharmacyHeroAsset.url} alt="Tanzanian pharmacist in a white coat using a StellarPOS terminal at a pharmacy counter" width={1408} height={768} fetchPriority="high" className="aspect-[3/2] w-full rounded-2xl object-cover shadow-elevated" />
             </div>
           </div>
         </section>
