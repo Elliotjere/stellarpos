@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { PLANS } from "@/components/site/Pricing";
 import { SITE, WHATSAPP_URL } from "@/lib/site";
-import jewelryShop from "@/assets/jewelry-shop.jpg";
+import jewelryHeroAsset from "@/assets/jewelry-hero.jpg.asset.json";
 import jewelryCounter from "@/assets/jewelry-counter.jpg";
 import jewelryDisplay from "@/assets/jewelry-display.jpg";
 
