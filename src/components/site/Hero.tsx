@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroShop from "@/assets/hero-shop.jpg";
-import dashboard from "@/assets/dashboard.jpg";
+import heroAsset from "@/assets/stellarpos-hero.jpg.asset.json";
 import { WHATSAPP_URL } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
@@ -66,10 +66,10 @@ export function Hero() {
 
         <div className="reveal relative" style={{ animationDelay: "120ms" }}>
           <img
-            src={dashboard}
-            alt="StellarPOS point of sale dashboard showing daily sales, profit and top selling products"
+            src={heroAsset.url}
+            alt="Tanzanian business owner using the StellarPOS point of sale system to serve a customer"
             width={1408}
-            height={960}
+            height={768}
             fetchPriority="high"
             className="w-full rounded-2xl shadow-elevated"
           />
