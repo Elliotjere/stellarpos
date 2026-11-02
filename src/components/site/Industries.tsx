@@ -11,7 +11,7 @@ const industries = [
   { icon: UtensilsCrossed, title: "Restaurants", text: "Restaurant POS Tanzania with table orders and kitchen tickets.", href: "/restaurants" },
   { icon: Coffee, title: "Cafes", text: "Quick service billing and daily cash reconciliation." },
   { icon: Cpu, title: "Electronics Stores", text: "Serial number tracking, warranties and quotations." },
-  { icon: Hammer, title: "Hardware Stores", text: "Bulk units, price levels and credit customers." },
+  { icon: Hammer, title: "Hardware Stores", text: "Bulk units, price levels and credit customers.", href: "/hardware-stores" },
   { icon: Shirt, title: "Fashion Stores", text: "Size, colour and style variants in one product." },
   { icon: Sparkles, title: "Beauty Shops", text: "Products plus services with loyalty rewards.", href: "/beauty-shops" },
   { icon: Gem, title: "Jewelry Shops", text: "Gold priced by weight and karat with item-level tracking.", href: "/jewelry-shops" },
