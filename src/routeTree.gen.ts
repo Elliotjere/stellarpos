@@ -16,6 +16,7 @@ import { Route as JewelryShopsRouteImport } from './routes/jewelry-shops'
 import { Route as LiquorStoresRouteImport } from './routes/liquor-stores'
 import { Route as PharmaciesRouteImport } from './routes/pharmacies'
 import { Route as RestaurantsRouteImport } from './routes/restaurants'
+import { Route as RetailShopsRouteImport } from './routes/retail-shops'
 import { Route as SupermarketsRouteImport } from './routes/supermarkets'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +54,11 @@ const RestaurantsRoute = RestaurantsRouteImport.update({
   path: '/restaurants',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RetailShopsRoute = RetailShopsRouteImport.update({
+  id: '/retail-shops',
+  path: '/retail-shops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SupermarketsRoute = SupermarketsRouteImport.update({
   id: '/supermarkets',
   path: '/supermarkets',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/liquor-stores': typeof LiquorStoresRoute
   '/pharmacies': typeof PharmaciesRoute
   '/restaurants': typeof RestaurantsRoute
+  '/retail-shops': typeof RetailShopsRoute
   '/supermarkets': typeof SupermarketsRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/liquor-stores': typeof LiquorStoresRoute
   '/pharmacies': typeof PharmaciesRoute
   '/restaurants': typeof RestaurantsRoute
+  '/retail-shops': typeof RetailShopsRoute
   '/supermarkets': typeof SupermarketsRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/liquor-stores': typeof LiquorStoresRoute
   '/pharmacies': typeof PharmaciesRoute
   '/restaurants': typeof RestaurantsRoute
+  '/retail-shops': typeof RetailShopsRoute
   '/supermarkets': typeof SupermarketsRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/liquor-stores'
     | '/pharmacies'
     | '/restaurants'
+    | '/retail-shops'
     | '/supermarkets'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/liquor-stores'
     | '/pharmacies'
     | '/restaurants'
+    | '/retail-shops'
     | '/supermarkets'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/liquor-stores'
     | '/pharmacies'
     | '/restaurants'
+    | '/retail-shops'
     | '/supermarkets'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   LiquorStoresRoute: typeof LiquorStoresRoute
   PharmaciesRoute: typeof PharmaciesRoute
   RestaurantsRoute: typeof RestaurantsRoute
+  RetailShopsRoute: typeof RetailShopsRoute
   SupermarketsRoute: typeof SupermarketsRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RestaurantsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/retail-shops': {
+      id: '/retail-shops'
+      path: '/retail-shops'
+      fullPath: '/retail-shops'
+      preLoaderRoute: typeof RetailShopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/supermarkets': {
       id: '/supermarkets'
       path: '/supermarkets'
@@ -203,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   LiquorStoresRoute: LiquorStoresRoute,
   PharmaciesRoute: PharmaciesRoute,
   RestaurantsRoute: RestaurantsRoute,
+  RetailShopsRoute: RetailShopsRoute,
   SupermarketsRoute: SupermarketsRoute,
 }
 export const routeTree = rootRouteImport
