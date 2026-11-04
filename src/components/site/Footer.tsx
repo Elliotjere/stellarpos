@@ -7,7 +7,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 const industries = [
   { label: "Cosmetics & Beauty Shop POS", to: "/beauty-shops" },
   { label: "Jewelry Shop POS Tanzania", to: "/jewelry-shops" },
-  { label: "Retail POS Tanzania", to: "/#industries" },
+  { label: "Retail POS Tanzania", to: "/retail-shops" },
   { label: "Supermarket POS", to: "/supermarkets" },
   { label: "Pharmacy POS", to: "/pharmacies" },
   { label: "Restaurant POS Tanzania", to: "/restaurants" },
